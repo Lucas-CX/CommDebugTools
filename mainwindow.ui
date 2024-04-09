@@ -6,26 +6,280 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1100</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="Serialtab">
+       <attribute name="title">
+        <string>串口调试</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QGroupBox" name="PortControlsBox">
+            <property name="title">
+             <string>串口设置</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>数据位：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QComboBox" name="comboData"/>
+             </item>
+             <item row="5" column="1">
+              <widget class="QComboBox" name="comboParity"/>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>停止位：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QComboBox" name="comboPort"/>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>校验位：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>端口：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>波特率：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QComboBox" name="comboBaud"/>
+             </item>
+             <item row="4" column="1">
+              <widget class="QComboBox" name="comboStop"/>
+             </item>
+             <item row="6" column="0">
+              <widget class="QPushButton" name="pushButton">
+               <property name="text">
+                <string>打开端口</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QPushButton" name="pushButton_2">
+               <property name="text">
+                <string>关闭端口</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="title">
+             <string>绘图设置</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_9">
+               <property name="text">
+                <string>最大值</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_8">
+               <property name="text">
+                <string>最小值</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string>刻度</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QSpinBox" name="spinAxesMax"/>
+             </item>
+             <item row="1" column="1">
+              <widget class="QSpinBox" name="spinYStep"/>
+             </item>
+             <item row="7" column="0" colspan="2">
+              <widget class="QPushButton" name="pushButton_AutoScale">
+               <property name="text">
+                <string>自动缩放</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="0" colspan="2">
+              <widget class="QListWidget" name="listWidget"/>
+             </item>
+             <item row="11" column="0" colspan="2">
+              <widget class="QPushButton" name="savePNGButton">
+               <property name="text">
+                <string>保存视图PNG</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_6">
+               <property name="text">
+                <string>点数</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QSpinBox" name="spinAxesMin"/>
+             </item>
+             <item row="0" column="1">
+              <widget class="QSpinBox" name="spinPoints"/>
+             </item>
+             <item row="10" column="0" colspan="2">
+              <widget class="QPushButton" name="pushButton_ResetVisible">
+               <property name="text">
+                <string>复位视图</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0" colspan="2">
+              <widget class="QPushButton" name="pushButton_3">
+               <property name="text">
+                <string>暂停绘制</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="title">
+             <string>接收设置</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="0" column="0">
+              <widget class="QCheckBox" name="hideRecvDataCheckBox">
+               <property name="text">
+                <string>不显示接收</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QCheckBox" name="hideRecvAreaCheckBox">
+               <property name="text">
+                <string>隐藏接收框</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QCheckBox" name="dataFormatCheckBox">
+               <property name="text">
+                <string>显示原始数据</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QPushButton" name="pushButton_ClearRecv">
+               <property name="text">
+                <string>清除接收</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QCustomPlot" name="widget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextBrowser" name="textBrowser">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Tab 2</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1100</width>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>设置</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
